@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>編集</title>
+</head>
+<body>
+    <h2><%= data.name %> の編集</h2>
+    <form action="/city/update/<%= data.id %>" method="POST">
+        <label>コード: <input type="text" name="code" value="<%= data.code %>" required></label><br>
+        <label>名前: <input type="text" name="name" value="<%= data.name %>" required></label><br>
+        <label>人口(人): <input type="number" name="population" value="<%= data.population %>" required></label><br>
+        <label>特産物: <input type="text" name="specialty" value="<%= data.specialty %>" required></label><br>
+        <br>
+        <input type="submit" value="更新">
+    </form>
+    <br>
+    <a href="/city">一覧に戻る</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>編集</title>
+</head>
+<body>
+    <h2><%= data.name %> の編集</h2>
+    <form action="/mac/update/<%= data.id %>" method="POST">
+        <label>商品名: <input type="text" name="name" value="<%= data.name %>" required></label><br>
+        <label>重量(g): <input type="number" name="weight" value="<%= data.weight %>" required></label><br>
+        <label>価格(円): <input type="number" name="price" value="<%= data.price %>" required></label><br>
+        <br>
+        <input type="submit" value="更新">
+    </form>
+    <br>
+    <a href="/mac">一覧に戻る</a>
+</body>
+</html>

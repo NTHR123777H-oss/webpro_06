@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>新規登録</title>
+</head>
+<body>
+    <h2>いちごを登録する</h2>
+    <form action="/strawberry" method="POST">
+        <label>品種名: <input type="text" name="name" required></label><br>
+        <label>甘さ: <input type="text" name="sweetness" required></label><br>
+        <label>産地: <input type="text" name="origin" required></label><br>
+        <br>
+        <input type="submit" value="登録">
+    </form>
+    <br>
+    <a href="/strawberry">一覧に戻る</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>編集</title>
+</head>
+<body>
+    <h2><%= data.name %> の編集</h2>
+    <form action="/strawberry/update/<%= data.id %>" method="POST">
+        <label>品種名: <input type="text" name="name" value="<%= data.name %>" required></label><br>
+        <label>甘さ: <input type="text" name="sweetness" value="<%= data.sweetness %>" required></label><br>
+        <label>産地: <input type="text" name="origin" value="<%= data.origin %>" required></label><br>
+        <br>
+        <input type="submit" value="更新">
+    </form>
+    <br>
+    <a href="/strawberry">一覧に戻る</a>
+</body>
+</html>

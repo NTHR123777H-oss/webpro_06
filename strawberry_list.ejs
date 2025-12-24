@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>いちご図鑑</title>
+</head>
+<body>
+    <h2>いちごの品種一覧</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>品種名</th>
+            <th>甘さ</th>
+            <th>主な産地</th>
+            <th>操作</th>
+        </tr>
+        <% for(let item of data) { %>
+        <tr>
+            <td><%= item.id %></td>
+            <td><a href="/strawberry/<%= item.id %>"><%= item.name %></a></td>
+            <td><%= item.sweetness %></td>
+            <td><%= item.origin %></td>
+            <td>
+                <a href="/strawberry/edit/<%= item.id %>">編集</a>
+                <a href="/strawberry/delete/<%= item.id %>">削除</a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    <br>
+    <a href="/strawberry/create">新品種を追加</a>
+    <br><br>
+    <a href="/">トップページに戻る</a>
+</body>
+</html>

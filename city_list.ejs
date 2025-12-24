@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>千葉県の市一覧</title>
+</head>
+<body>
+    <h2>千葉県の市町村データ</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>コード</th>
+            <th>名前</th>
+            <th>人口</th>
+            <th>特産物・特徴</th>
+            <th>操作</th>
+        </tr>
+        <% for(let item of data) { %>
+        <tr>
+            <td><%= item.id %></td>
+            <td><%= item.code %></td>
+            <td><a href="/city/<%= item.id %>"><%= item.name %></a></td>
+            <td><%= item.population %>人</td>
+            <td><%= item.specialty %></td>
+            <td>
+                <a href="/city/edit/<%= item.id %>">編集</a>
+                <a href="/city/delete/<%= item.id %>">削除</a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    <br>
+    <a href="/city/create">新しい市を追加</a>
+    <br><br>
+    <a href="/">トップページに戻る</a>
+</body>
+</html>
